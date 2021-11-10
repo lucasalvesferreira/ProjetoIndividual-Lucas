@@ -3,23 +3,23 @@ body {
     padding: 0;
     font-family: 'Exo 2';
     /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(252, 252, 252);
 }
 
-#check_menu{
+
+#check{
     display: none;
 }
-#icone_menu{
-    height: 30px;
+#icone{
     cursor: pointer;
     padding: 15px;
     position: absolute;
     z-index: 1;
 }
 .barra{
-    background-color: rgba(0, 0, 0, 0.637);
+    background-color: rgba(100, 3, 3, 0.802);
     height: 100%;
-    width: 100%;
+    width: 300px;
     position: absolute;
     transition: all .2s linear;
     left: -300px;
@@ -31,10 +31,10 @@ nav{
 }
 
 nav a {
-    text-decoration:none ;
+    text-decoration: none ;
 }
-.link_menu{
-    background-color: #494950;
+.link{
+    background-color: rgba(214, 23, 23, 0.624);
     padding: 20px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12pt;
@@ -45,20 +45,21 @@ nav a {
     margin-top: 200px;
 
 }
-.link_menu:hover{
-    background-color: #050542;
+.link:hover{
+    background-color: #460303;
 
 }
-#check_menu:checked ~ .barra{
+#check:checked ~ .barra{
 transform: translateX(300px);
 
 }
-#check_menu:checked ~ .barra nav a .link{
+#check:checked ~ .barra nav a .link{
 opacity: 1;
 margin-top: 0;
 transition-delay: .2s;
 
 }
+
 
 .container {
     width: 80%;
@@ -94,4 +95,34 @@ transition-delay: .2s;
     list-style: none;
     color: #E3B062;
     /* border: 3px solid green; */
+}
+/* BANNER */
+
+.banner {
+    height: 1000px;
+    color: white;
+    /* border: 3px solid yellow; */
+    background-image: url("./imagens e icones/fundo.jpg");
+    background-size: cover;
+}
+
+.banner .container {
+    /* border: 3px solid green; */
+    height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.banner p {
+    /* border: 3px solid cyan; */
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    width: 280px;
+    font-size: 36px;
+    margin-left: 350px;
+}
+
+.banner span {
+    font-weight: 800;
 }
