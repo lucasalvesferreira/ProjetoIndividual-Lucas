@@ -15,18 +15,20 @@ body {
     padding: 15px;
     position: absolute;
     z-index: 1;
+    top: 1%;
 }
 .barra{
-    background-color: rgba(100, 3, 3, 0.802);
+    background-color: rgba(42, 2, 2, 0.802);
     height: 100%;
     width: 300px;
     position: absolute;
     transition: all .2s linear;
     left: -300px;
+    top: 85px;
 }
 nav{
     width: 100%;
-    position: absolute;
+    /* position: absolute; */
     top: 60px;
 }
 
@@ -56,7 +58,7 @@ transform: translateX(300px);
 #check:checked ~ .barra nav a .link{
 opacity: 1;
 margin-top: 0;
-transition-delay: .2s;
+transition-delay: .3s;
 
 }
 
@@ -64,12 +66,13 @@ transition-delay: .2s;
 .container {
     width: 80%;
     margin: auto;
+    
 }
 
 .header {
     color: #32B9CD;
     border-bottom: 3px solid #32B9CD;
-    /* border: 3px solid yellow; */
+    border: 3px solid #32B9CD;
 }
 
 .header .container {
@@ -99,11 +102,25 @@ transition-delay: .2s;
 /* BANNER */
 
 .banner {
-    height: 1000px;
+    height: 450px;
     color: white;
-    /* border: 3px solid yellow; */
+    border: 1px solid #32B9CD;
+    background-image: url("./imagens e icones/4732.gif");
+    background-size: 65%;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+}
+.banner2 {
+    height: 800px;
+    color: white;
+    /* border: 3px solid rgb(255, 255, 255); */
     background-image: url("./imagens e icones/fundo.jpg");
-    background-size: cover;
+    background-size: 80%;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position-x: center;
 }
 
 .banner .container {
@@ -120,7 +137,7 @@ transition-delay: .2s;
     padding: 0;
     width: 280px;
     font-size: 36px;
-    margin-left: 350px;
+    margin-right: 95%;
 }
 
 .banner span {
