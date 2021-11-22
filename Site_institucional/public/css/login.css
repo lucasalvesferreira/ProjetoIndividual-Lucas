@@ -128,7 +128,7 @@ transition-delay: .3s;
     background-color: #15172b;
     border-radius: 20px;
     box-sizing: border-box;
-    height: 500px;
+    height: 550px;
     padding: 20px;
     width: 380px;   
   }
@@ -249,6 +249,18 @@ transition-delay: .3s;
   .submit:active {
     background-color: #06b;
   }
+
+  .loading-div {
+    width: 50px;
+    /* border: 3px solid pink; */
+    margin: auto;
+    display: none;
+}
+
+.loading-div img {
+    height: 50px;
+    width: 50px;
+}
   
   /* FOOTER */
   

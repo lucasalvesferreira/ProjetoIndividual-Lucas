@@ -32,10 +32,11 @@ body {
     position: absolute;
     transition: all .2s linear;
     left: -300px;
-    top: 98px; 
+    /* top: 98px;  */
     display: flex;
     justify-content: end;
     margin-bottom: 0%;
+    
 }
 nav{
     width: 100%;
