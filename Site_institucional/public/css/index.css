@@ -1,0 +1,333 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Exo 2';
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    background-color: rgb(0, 0, 0);
+   
+}
+
+
+#check{
+    display: none;
+}
+
+.miniPoke_Titulo{
+    height: 35px;
+}
+
+
+#icone{
+    cursor: pointer;
+    padding: 15px;
+    position: absolute;
+    z-index: 1;
+    top: 1%;
+}
+.barra{
+    border-radius: 15px;
+    background-color: #2e1ca86e;
+    height: 100%;
+    width: 300px;
+    position: absolute;
+    transition: all .2s linear;
+    left: -300px;
+    top: 98px; 
+    display: flex;
+    justify-content: end;
+    margin-bottom: 0%;
+}
+nav{
+    width: 100%;
+    position: absolute;
+    /* top: 60px; */
+}
+
+nav a {
+    text-decoration: none ;
+}
+.link{
+    border-radius: 15px;
+    background-color: #10084296;
+    padding: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    transition: all .2s linear;
+    color: #f4f4f9;
+    border-bottom: 2px solid rgb(34, 34, 34);
+    opacity: 0;
+    margin-top: 90px;
+
+}
+.link:hover{
+    background-color: #4f39dd98;
+
+}
+#check:checked ~ .barra{
+transform: translateX(300px);
+
+}
+#check:checked ~ .barra nav a .link{
+    opacity: 1;
+    margin-top: 0;
+    transition-delay: .3s;
+    
+}
+
+
+.container {
+    width: 80%;
+    margin: auto;
+    
+}
+
+.header {
+    background-color: #c4f1f8;
+    border-radius: 20px;
+    color: #32B9CD;
+    border-bottom: 5px solid #32B9CD;
+    border: 3px solid #32B9CD;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    /* border: 3px solid pink; */
+}
+
+.header a {
+    text-decoration: none;
+    color: #32B9CD;
+}
+
+.avatar_index_foto{
+    height: 9vh;
+    margin-left: 210%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+    border-radius: 50px;
+    border: 2px solid #32B9CD;
+}
+
+/* BANNER */
+
+.banner {
+    border-radius: 20px;
+    height: 45vh;
+    color: white;
+    border: 0.5px solid #32B9CD;
+    background-image: url("../assets/gif/4732.gif");
+    background-size: 67%;
+    background-color: rgb(0, 0, 0);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    width: 99%;
+    margin-left: 0.4%;
+}
+.banner2 {
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 24px;
+    height: 90vh;
+    width: 80%;
+    color: white;
+    border: 0.5px solid#32B9CD;
+    background-image: url("../assets/imgs/fundo.jpg");
+    background-size: 100%;
+    background-color: rgb(0, 0, 0);
+    background-repeat: no-repeat;
+    background-position-x: center;
+ }
+ 
+ 
+ .banner3 {
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 24px;
+    height: 90vh;
+    width: 80%;
+    color: white;
+    border: 0.5px solid#32B9CD;
+    background-image: url("../assets/imgs/pokemon-raichu.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+   
+} 
+ .banner4 {
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 24px;
+    height: 100vh;
+    width: 80%;
+    color: white;
+    border: 0.5px solid#32B9CD;
+    background-image: url("../assets/imgs/palletTown3dnigth.jpg");
+    background-size: 100%;
+    /* background-color: black; */
+    background-repeat: no-repeat;
+    background-position-x: center;
+} 
+
+.banner .container {
+    /* border: 3px solid green; */
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.banner .container2 {
+    /* border: 3px solid green; */
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.banner .container3 {
+    /* border: 3px solid green; */
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.banner .container4 {
+    /* border: 3px solid green; */
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+.banner p {
+    /* border: 3px solid cyan; */
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    width: 280px;
+    font-size: 36px;
+    margin-right: 95%;
+}
+
+.banner span {
+    font-weight: 800;
+}
+
+/* versions */
+  #versions {
+    display : flex;
+    align-items : center;
+    justify-content : center;  
+
+    min-height : 800px;
+  }
+  
+  .container_versions {
+    position : relative;
+    width : 1100px;
+    display : flex;
+    align-items : center;
+    justify-content : center;
+    flex-wrap:wrap;
+    padding : 30px;  
+  }
+  
+  .container_versions .card {
+    position: relative;
+    max-width : 280px;
+    height : 215px;  
+    
+    margin : 30px 10px;
+    padding : 20px 15px;
+    
+    display : flex;
+    flex-direction : column;
+    box-shadow : 0 5px 5px rgba(0,0,0,0.5);
+    transition : 0.5s ease-in-out;
+    border-radius : 15px;
+  }
+
+  .container_versions #card0{
+    background-color : #d3382a;
+  }
+  .container_versions #card1{
+    background-color : #e2cc52;
+  }
+  .container_versions #card2{
+    background-color : #52e734;
+  }
+
+  #Ver_mais{
+    text-decoration: none
+  }
+  .container_versions .card:hover {
+    height : 320px;    
+  }
+  #img_version{
+    width : 260px;
+    height : 250px;
+  }
+  
+  .container_versions .card .image {
+    position : relative;
+    width : 260px;
+    height : 260px;
+    
+    top : -40%;
+    left: 8px;
+    box-shadow : 0 5px 5px rgba(0,0,0,0.2);
+    z-index : 1;
+  }
+  
+  .container_versions .card .image img {
+    max-width : 100%;
+    border-radius : 15px;
+  }
+  
+  .container_versions .card .content {
+    position : relative;
+    top : -140px;
+    padding : 10px 15px;
+    color : #111;
+    text-align : center;
+    
+    visibility : hidden;
+    opacity : 0;
+    transition : 0.3s ease-in-out;
+      
+  }
+  
+  .container_versions .card:hover .content {
+     margin-top : 30px;
+     visibility : visible;
+     opacity : 1;
+     transition-delay: 0.2s;
+    
+  }
+
+/* FOOTER */
+
+.footer {
+    background-image: url("../assets/imgs/unnamed-azul.webp");
+    background-color: #aae6f0;
+    height: 250px;
+    color: rgb(0, 0, 0);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: 110%;
+   
+}
+
+.footer .container {
+    display: flex;
+    justify-content: center;
+}
+
+h4 {
+    margin: 0;
+    padding: 0;
+}

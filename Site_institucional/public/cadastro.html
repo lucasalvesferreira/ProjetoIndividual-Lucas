@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poke_lucas | Cadastro </title>
+
+    <script src="./assets/js/funcoes.js"></script>
+    <link rel="icon" href="./assets/icons/Pokebola(3).png">
+    <link rel="stylesheet" href="./css/cadastro.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
+
+    <link rel="stylesheet" href="script/cadastro.js">
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+
+            <a href="Index.html">
+                <h1>PokeLucas <img src='./assets/icons/Pokebola(3).png' class="miniPoke_Titulo"></h1>
+            </a>
+
+            <div class="avatar_index">
+                <a href="login.html"><img src="../public/assets/gif/avatar.gif" class="avatar_index_foto"></a>
+            </div>
+        </div>
+
+    </div>
+
+    <input type="checkbox" id="check">
+    <label id="icone" for="check"><img src="./assets/icons/55003.png" style="height: 35px;"></label>
+    <div class="barra">
+
+        <nav>
+            <a href="Index.html">
+                <div class="link">Home</div>
+            </a>
+            <a href="login.html">
+                <div class="link">Login</div>
+            </a>
+            <a href="cadastro.html">
+                <div class="link">Cadastro</div>
+            </a>
+            <a>
+                <div class="link">Pokemon</div>
+            </a>
+            <a>
+                <div class=""></div>
+            </a>
+            <a href="">
+                <div class="link">Forum</div>
+            </a>
+        </nav>
+    </div>
+
+
+    <div id="div_cadastro">
+
+        <div class="form">
+            <div class="title">Bem Vindo!!</div>
+            <div class="subtitle">Começe sua jornada Pokemon!</div>
+            <div class="formulario">
+            <form id="form_cadastro" method="post" onsubmit="return cadastrar()">
+
+                <div class="input-container ic1">
+                    <input name="nome" id="firstname" class="input" type="text" placeholder=" " />
+                    <div class="cut"></div>
+                    <label for="firstname" class="placeholder">Nome</label>
+                </div>
+
+                <div class="input-container ic2">
+                    <input name="email" id="email" class="input" type="text" placeholder=" " />
+                    <div class="cut cut-short"></div>
+                    <label for="email" class="placeholder">Email</label>
+                </div>
+
+                <div class="input-container ic2">
+                    <input name="senha" id="senha" class="input" type="text" placeholder=" " />
+                    <div class="cut cut-short"></div>
+                    <label for="senha" class="placeholder">Senha</label>
+                </div>
+
+                <div class="input-container ic2">
+                    <input name="confirmacao-senha" id="senha" class="input" type="text" placeholder=" " />
+                    <div class="cut cut-short"></div>
+                    <label for="senha" class="placeholder">Senha</label>
+                </div>
+
+                <button  type="text" class="submit">Começar</button>
+            </form>
+            </div>
+            <div id="div_aguardar" class="loading-div">
+                <img src="./assets/gif/loading.gif" id="loading-gif">
+            </div>
+
+            <div id="div_erros_login"></div>
+        </div>
+
+    </div>
+
+
+
+    <div class="footer">
+        <div class="container">
+            <h4>Feito com amor por um aluno BandTec &copy; 2021</h4>
+        </div>
+    </div>
+</body>
+
+</html>
