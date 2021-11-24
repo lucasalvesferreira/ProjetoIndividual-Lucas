@@ -1,0 +1,172 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Exo 2';
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    background-color: rgb(0, 0, 0);
+   
+}
+
+
+/* Menu Hamburguer */
+
+#check{
+    display: none;
+}
+
+.miniPoke_Titulo{
+    height: 35px;
+}
+
+
+#icone{
+    cursor: pointer;
+    padding: 15px;
+    position: absolute;
+    z-index: 1;
+    top: 1%;
+}
+.barra{
+    border-radius: 15px;
+    background-color: #2e1ca86e;
+    height: 100%;
+    width: 300px;
+    position: absolute;
+    transition: all .2s linear;
+    left: -300px;
+    /* top: 98px;  */
+    display: flex;
+    justify-content: end;
+    margin-bottom: 0%;
+    
+}
+nav{
+    width: 100%;
+    position: absolute;
+    /* top: 60px; */
+}
+
+nav a {
+    text-decoration: none ;
+}
+.link{
+    border-radius: 15px;
+    background-color: #10084296;
+    padding: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    transition: all .2s linear;
+    color: #f4f4f9;
+    border-bottom: 2px solid rgb(34, 34, 34);
+    opacity: 0;
+    margin-top: 90px;
+
+}
+.link:hover{
+    background-color: #4f39dd98;
+
+}
+#check:checked ~ .barra{
+transform: translateX(300px);
+
+}
+#check:checked ~ .barra nav a .link{
+    opacity: 1;
+    margin-top: 0;
+    transition-delay: .3s;
+    
+}
+/* Nave Bar */
+
+.container {
+    width: 80%;
+    margin: auto;
+    
+}
+
+.header {
+    background-color: #c4f1f8;
+    border-radius: 20px;
+    color: #32B9CD;
+    border-bottom: 5px solid #32B9CD;
+    border: 3px solid #32B9CD;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    /* border: 3px solid pink; */
+}
+
+.header a {
+    text-decoration: none;
+    color: #32B9CD;
+}
+
+.avatar_index_foto{
+    height: 12vh;
+    margin-left: 165%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    border-radius: 50px;
+    border: 2px solid #32B9CD;
+}
+
+/* BANNER */
+
+/* .boxcardsPoke{
+    justify-content: center;
+    align-items: center;
+} */
+
+.banner2 {
+    margin-left: 3%;  
+    border-radius: 24px;
+    height: 1035vh;
+    width: 95%;
+    color: white;
+    border: 3.5px solid#32B9CD;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+ }
+ 
+
+
+.cardsPoke {
+    background-color: purple;
+    width: 25vh;
+    height: 35vh;
+    margin: 30px;
+    border-radius: 15px;
+}
+
+
+/* FOOTER */
+
+.footer {
+    background-image: url("../assets/imgs/unnamed-azul.webp");
+    background-color: #aae6f0;
+    height: 250px;
+    color: rgb(0, 0, 0);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: 110%;
+   
+}
+
+.footer .container {
+    display: flex;
+    justify-content: center;
+}
+
+h4 {
+    margin: 0;
+    padding: 0;
+}
