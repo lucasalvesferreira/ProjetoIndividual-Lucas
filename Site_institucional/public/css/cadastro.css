@@ -162,6 +162,19 @@ transition-delay: .3s;
   .ic2 {
     margin-top: 30px;
   }
+  .ic3 {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .ic3 label{
+    /* margin-left: 30px; */
+    justify-content: center;
+    align-items: center;
+
+  }
   
   .input {
     background-color: #303245;
