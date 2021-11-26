@@ -128,9 +128,9 @@ transition-delay: .3s;
     background-color: #15172b;
     border-radius: 20px;
     box-sizing: border-box;
-    height: 620px;
+    height: 650px;
     padding: 20px;
-    width: 380px;   
+    width: 400px;   
   }
   
   .title {
@@ -168,6 +168,11 @@ transition-delay: .3s;
     justify-content: center;
     align-items: center;
     justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 30px;
+    width: 70%;
   }
   .ic3 label{
     /* margin-left: 30px; */
@@ -175,7 +180,20 @@ transition-delay: .3s;
     align-items: center;
 
   }
+legend{
+  color: #06b;
+}
+
   
+  label .Inicial_charmander{
+    top: 30px;
+  }
+  
+fieldset input{
+  margin-left: 10px;
+  padding-left: 10px;
+}
+
   .input {
     background-color: #303245;
     border-radius: 12px;

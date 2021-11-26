@@ -12,6 +12,10 @@ function cadastrar() {
     var email = formulario.get("email");
     var senha = formulario.get("senha");
     var confirmacaoSenha = formulario.get("confirmacaosenha");
+    var pokemonFavorito = formulario.get("pokemonFavorito");
+
+
+
 
     // TODO: VERIFICAR AS VALIDAÇÕES QUE ELES ESTÃO APRENDENDO EM ALGORITMOS 
     if (nome == "" || email == "" || senha == "" || confirmacaoSenha == "") {
