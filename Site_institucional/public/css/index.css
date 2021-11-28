@@ -155,6 +155,7 @@ transform: translateX(300px);
     background-size: 110%;
     background-repeat: no-repeat;
     background-position-x: center;
+    
    
 } 
  .banner4 {
@@ -178,28 +179,253 @@ transform: translateX(300px);
     display: flex;
     align-items: center;
 }
-.banner .container2 {
+.banner2 .container2 {
     /* border: 3px solid green; */
     height: 100%;
     display: flex;
-    align-items: center;
+    /* align-items: center; */
 }
-.banner .container3 {
+.banner3 .container3 {
     /* border: 3px solid green; */
     height: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content : center;  
 }
 
-.banner .container4 {
+.banner4 .container4 {
     /* border: 3px solid green; */
-    height: 100%;
+    height: 90%;
     display: flex;
     align-items: center;
+    justify-content: center;
+    
+}
+.banner4 h2{
+    font-size: 25px;
+    font-family: serif;
+}
+
+
+.Novidades{
+    height: 90%;
+    width: 100%;
+    margin: 5%;
+    /* background-color: #6bfdf67a; */
+    display: flex;
+    border-radius:65px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.News_esquerdo{
+    background-color: rgba(2, 31, 2, 0.459) ;
+    height: 99%;
+    width: 30%;
+    border-radius:50px;
+    /* margin: 5px; */
+    border: rgb(255, 255, 255) solid 3px;
+    
+}
+.News_direito{
+    background-color:rgba(2, 31, 2, 0.459) ;
+    height: 99%;
+    width: 70%;
+    border-radius:50px;
+    /* margin: 5px; */
+    justify-content: center;
+    align-items: center;
+    border: rgb(255, 255, 255) solid 3px;
+    
+}
+
+.news1{
+    border-radius:50px;
+    justify-content: center;
+    align-items: center;
+    /* background-color: darkorchid; */
+    margin: 3%;
+    margin-left: 75px;
+    width: 85%;
+    height: 45%;
+    display: flex;
+}
+
+.news1:hover{
+    border: solid white 1px;
+}
+.news2:hover{
+    border: solid white 1px;
+}
+
+
+.news2{
+    border-radius:50px;
+    justify-content: center;
+    align-items: center;
+    /* background-color: darkorchid; */
+    margin: 1%;
+    margin-left: 75px;
+    width: 85%;
+    height: 45%;
+    display: flex;
+}
+.News_direito a{
+    text-decoration: none
+}
+.News_esquerdo a{
+    text-decoration: none
+}
+
+.part1{ 
+    background-image: url('../assets/imgs/maxresdefault\ \(2\).jpg');
+    background-repeat: no-repeat;
+    background-position:center ;
+    background-size: 160%;
+    border-top-left-radius :50px;
+    border-bottom-left-radius :50px;
+    background-color: rgb(20, 255, 255);
+    width: 60%;
+    height: 100%;
+    
+}
+.part2{ 
+    border-top-right-radius :50px;
+    border-bottom-right-radius :50px;
+    background-color: rgba(255, 20, 145, 0.616);
+    width: 40%;
+    height: 100%;
+    
+    
+}
+.part2 p{
+    margin: 15px;
+    font-family: cursive;
+    color: ghostwhite;
+}
+.part2 h2{
+    margin: 15px;
+    font-family: cursive;
+    font-size: xx-large;
+    color: rgb(0, 0, 0);
+}
+.part3{ 
+    background-image: url('../assets/imgs/pokemon-evolutions-11-en.png');
+    background-repeat: no-repeat;
+    background-position:center ;
+    background-size: 125%;
+    border-top-left-radius :50px;
+    border-bottom-left-radius :50px;
+    background-color: rgb(20, 255, 255);
+    width: 60%;
+    height: 100%;
+    
+}
+.part4{ 
+    border-top-right-radius :50px;
+    border-bottom-right-radius :50px;
+    background-color: rgba(0, 0, 0, 0.459);
+    width: 40%;
+    height: 100%;
+    
+    
+}
+.part4 p{
+    margin: 15px;
+    font-family: cursive;
+    color: ghostwhite;
+}
+.part4 h2{
+    margin: 15px;
+    font-family: cursive;
+    font-size: x-large;
+    color: darkgoldenrod;
 }
 
 
 
+.novo1{
+    background-color: rgba(0, 0, 0, 0.459);
+    height: 30%;
+    width: 80%;
+    margin: 5%;
+    margin-left: 10%;
+    border-radius: 15px;
+}
+.novo2{
+    background-color: rgba(0, 0, 0, 0.459);
+    height: 30%;
+    width: 80%;
+    margin: 5%;
+    margin-left: 10%;
+    border-radius: 15px;
+}
+.novo3{
+    background-color: rgba(0, 0, 0, 0.459);
+    height: 30%;
+    width: 80%;
+    margin-left: 10%;
+    border-radius: 15px;
+    
+}
+
+.novo1:hover{
+    border: solid white 1px;
+}
+.novo2:hover{
+    border: solid white 1px;
+}
+.novo3:hover{
+    border: solid white 1px;
+}
+
+.prt1{
+    border-top-right-radius :15px;
+    border-top-left-radius :15px;
+    height: 60%;
+    width: 100%;
+    background-image: url(../assets/imgs/pokeday-parade2.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.prt2 p{
+    margin: 15px;
+    font-family: cursive;
+    color: ghostwhite;
+}
+
+.prt3{
+    border-top-right-radius :15px;
+    border-top-left-radius :15px;
+    height: 60%;
+    width: 100%;
+    background-image: url(../assets/imgs/brilliant-diamond.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.prt4 p{
+    margin: 10px;
+    font-family: cursive;
+    color: ghostwhite;
+    font-size: small;
+}
+.prt5{
+    border-top-right-radius :15px;
+    border-top-left-radius :15px;
+    height: 60%;
+    width: 100%;
+    background-image: url(../assets/imgs/pokemon-evolutions-169-en.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.prt6 p{
+    margin: 10px;
+    font-family: cursive;
+    color: ghostwhite;
+    font-size: small;
+}
 
 .banner p {
     /* border: 3px solid cyan; */
@@ -211,35 +437,96 @@ transform: translateX(300px);
     margin-right: 95%;
 }
 
+    
+
 .banner span {
     font-weight: 800;
 }
 
+/* Efeito maquina de escrever */
+.titulo-principal{
+    max-width: 480px;
+    text-align: center;
+    margin: 60px auto;
+    font-family:'Courier New', Courier, monospace;
+    color: #fff;
+}
+.titulo-principal:after{
+ content: '|';
+ margin-left: 4px;
+ opacity: 1;
+ animation: pisca .7s infinite;
+}
+/* Animação aplicada ao content referente a classe *.titulo-principal* resultando num efeito de cursor piscando. */
+
+@keyframes pisca{
+    0%, 100%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+}
+
+
+.conhece  {
+   margin-top: 80px;
+width: 43%;
+height: 100px;
+flex-direction: column;
+font-family: cursive;
+font-weight: bolder;
+background-color: rgba(149, 153, 153, 0.424);
+border-radius:20px   ;
+
+}
+
+.informa {
+    font-weight: bolder;
+    color: rgb(0, 0, 0);
+    background-color: rgba(227, 231, 231, 0.424);
+    font-family: cursive;
+    width: 60%;
+    height: 110px;
+flex-direction: column;
+border-radius:15px   ;
+margin: 35px;
+padding: 10px;
+
+}
+
+
+
 /* versions */
-  #versions {
+#versions {
+
+
     display : flex;
     align-items : center;
     justify-content : center;  
+    
+    min-height : 500px;
+}
 
-    min-height : 800px;
-  }
-  
-  .container_versions {
+.container_versions {
     position : relative;
-    width : 1100px;
+    width : 900px;
     display : flex;
     align-items : center;
     justify-content : center;
-    flex-wrap:wrap;
-    padding : 30px;  
+    padding : 40px;  
+    margin: 120px;
   }
-  
+  .container_versions p{
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+  }
   .container_versions .card {
     position: relative;
     max-width : 280px;
     height : 215px;  
     
-    margin : 30px 10px;
+    margin : 40px 10px;
     padding : 20px 15px;
     
     display : flex;
@@ -250,13 +537,13 @@ transform: translateX(300px);
   }
 
   .container_versions #card0{
-    background-color : #d3382a;
+    background-color : #d3382a88;
   }
   .container_versions #card1{
-    background-color : #e2cc52;
+    background-color : #e2cc526e;
   }
   .container_versions #card2{
-    background-color : #52e734;
+    background-color : #52e7348c;
   }
 
   #Ver_mais{

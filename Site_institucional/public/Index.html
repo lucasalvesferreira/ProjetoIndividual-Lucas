@@ -14,6 +14,8 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
 
+
+
 </head>
 
 <body>
@@ -48,13 +50,13 @@
             <a href="cadastro.html">
                 <div class="link">Cadastro</div>
             </a>
-            <a href="pokemons.html">
+            <a href="pokecards.html">
+                <div class="link">PokeCards</div>
+            </a>
+            <a href="Pokemon.html">
                 <div class="link">Pokemon</div>
             </a>
-            <a>
-                <div class=""></div>
-            </a>
-            
+
             <a href="">
                 <div class="link">Forum</div>
             </a>
@@ -64,21 +66,32 @@
     <div class="banner">
         <div class="container">
             <p>
-                Informação <span> Games🎮</span> E muitoo <span>Mais</span>.
+                Informação Games🎮 E muitoo Mais.
             </p>
         </div>
     </div>
 
     <div class="banner2">
-        <div class="container2"></div>
+        <div class="container2">
+
+            <!-- <h1 class="titulo-principal"> Desperte a essência Pokemon que existe dentro de você!! </h1>  -->
+
+        </div>
     </div>
 
     <div class="banner3">
         <div class="container3">
 
+            <div class="conhece">
+
+                <h2>Voce conhece as primeiras versoes do Game Pokemon:</h2>
+            </div>
+
             <div id="versions">
 
+
                 <div class=container_versions>
+
 
                     <div class=card id="card0">
                         <div class=image>
@@ -109,20 +122,102 @@
                         </div>
                         <div class=content>
                             <h3>Pokémon LeafGreen</h3>
-                            <p>Arte da caixa norte-americana para o Pokémon LeafGreen , representando o Pokémon Venusaur.</p>
-                                <a id="Ver_mais" href="pokemons.html">Ver mais</a>
+                            <p>Arte da caixa norte-americana para o Pokémon LeafGreen , representando o Pokémon
+                                Venusaur.</p>
+                            <a id="Ver_mais" href="pokemons.html">Ver mais</a>
                         </div>
                     </div>
 
-
                 </div>
+
+            </div>
+            <div class="informa">
+
+                <P>Pokemon sem duvida e uma das franquias mais conhecidas pelo mundo, desde que foi solto no japão em
+                    2004.</P>
+                <p>E tem ganhado fama ate os dias atuais, sendo comercializo em jogos, roupas, animes, etc.</p>
+                <p>Acima você encontra os primeros remakes dos jogos originais red e blue.</p>
             </div>
 
         </div>
     </div>
 
     <div class="banner4">
-        <div class="container4"></div>
+        <h2>Novidades:</h2>
+
+        <div class="container4">
+
+            <div class="Novidades">
+                <div class="News_direito">
+
+                    <a href="">
+                        <div class="news1">
+
+                            <div class="part1"></div>
+                            <div class="part2">
+                                <h2>Assista agora mesmo!</h2>
+                                <p>Depois que um experimento científico leva à criação de um clone de Mewtwo,
+                                    ele se propõe a destruir o mundo.</p>
+                                <p>Ash e seus amigos decidem frustrar os planos malignos de Mewtwo.</p>
+                                <p>Data de lançamento : 7 de janeiro de 2000 ( Brasil )</p>
+
+                            </div>
+
+                        </div>
+                    </a>
+
+                    <a href="">
+                        <div class="news2">
+                            <div class="part3"></div>
+                            <div class="part4">
+                                <h2>Assista trailer de Pokemons Evolution!</h2>
+                                <p>Os próximos quatro episódios apresentam mais treinadores, mais batalhas, mais Pokémon
+                                    e ainda mais emoção.</p>
+                            </div>
+
+                        </div>
+                    </a>
+                </div>
+                <div class="News_esquerdo">
+
+                    <a href="">
+                        <div class="novo1">
+                            <div class="prt1"></div>
+                            <div class="prt2">
+                                <p>Este ano, Eevee voará ao lado de Pikachu pelos céus de Manhattan no icônico desfile
+                                    do
+                                    feriado.</p>
+                            </div>
+                        </div>
+                    </a>
+
+
+                    <a href="">
+
+                        <div class="novo2">
+                            <div class="prt3"></div>
+                            <div class="prt4">
+                                <p>Experimente a nostalgia dos jogos Pokémon Diamond ™ e Pokémon Pearl ™ em uma aventura
+                                    renascida nos sistemas Nintendo Switch ™..</p>
+
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="">
+                        <div class="novo3">
+                            <div class="prt5"></div>
+                            <div class="prt6">
+                                <p>Assista ao trailer da segunda metade das evoluções Pokémon.</p>
+
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
     </div>
 
 
@@ -135,3 +230,21 @@
 </body>
 
 </html>
+
+<script>
+    function typeWrite(elemento) {
+        const textoArray = elemento.innerHTML.split('');
+        elemento.innerHTML = '';
+        textoArray.forEach((letra, i) => {
+
+            setTimeout(function () {
+                elemento.innerHTML += letra;
+            }, 75 * i)
+
+        });
+    }
+    const titulo = document.querySelector('p');
+    typeWrite(titulo);
+    typeWrite(document.querySelector('p'));
+
+</script>
