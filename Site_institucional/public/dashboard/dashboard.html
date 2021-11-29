@@ -16,69 +16,187 @@
 
 </head>
 
-<body >
-<!-- onload="validarSessao(),  obterDadosGrafico(1)"> -->
+<body>
+    <!-- onload="validarSessao(),  obterDadosGrafico(1)"> -->
 
     <div class="header">
         <div class="container">
-            
-            <div class="btn-logout" onclick="limparSessao()">
-                <h3>Sair</h3>
-            </div>
-            
 
-            
+            <button class="btn-logout" onclick="limparSessao()"> Sair</button>
+
+
         </div>
     </div>
-</div>
 
 
-<div class="janela">
-                    <!-- <div class="avatar_index">
-                        <img src="" class="avatar_index_foto"> -->
-                <div class="header-left">
-                    <h1>PokeLucas <img class="miniPoke_Titulo" src='../assets/icons/Pokebola(3).png'></h1>
-        
-                    <div class="hello">
-                        <h3>Olá, <span id="b_usuario"></span>!</h3>
-                    </div>
-        
-                    <div class="btn-nav-white">
-                        <a href="./cards.html">
-                            <h3>Meu Perfil</h3>
-                        </a>
-                    </div>
-        
-                    <div class="btn-nav">
-        
+
+    <div class="janela">
+
+        <div class="header-left">
+            <h1>PokeLucas <img class="miniPoke_Titulo" src='../assets/icons/Pokebola(3).png'></h1>
+
+            <div class="Perfil">
+                <div class="avatar_index_foto"> </div>
+
+            </div>
+
+
+            <div class="menupreto">
+
+                <div class="hello">
+                    <h3>Olá, <span id="b_usuario"></span>!</h3>
+                </div>
+
+                <div class="btn-nav-white">
+                    <a href="">
+                        <h3>Pokedex</h3>
+                    </a>
+                </div>
+
+                <div class="btn-nav">
+                    <a href="">
                         <h3>Meus Pokemons</h3>
-        
-                    </div>
-        
-                    <div class="btn-nav-white">
-                        <a href="./mural.html">
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- <div class="btn-nav-white">
+                        <a href="">
                             <h3>Treinadores</h3>
                         </a>
                     </div>  
-        
-                </div>
-        
-                <div class="dash">
-                    <div class="btns-dash">
-                        <!-- O gráfico é chamado de acordo com o id (fk_aquario) do banco  -->
-                        <button class="btn-chart" onclick="obterDadosGrafico(1)">Aquario 1</button>
-                        <button class="btn-chart" onclick="obterDadosGrafico(2)">Aquario 2</button>
-                        <button class="btn-chart" onclick="obterDadosGrafico(3)">Aquario 3</button>
-                        <button class="btn-chart" onclick="obterDadosGrafico(4)">Aquario 4</button>
+                -->
+
+        </div>
+
+
+        <div class="div_corpo">
+
+            <div class="gameBoy">
+
+
+
+                <!-- parte esquerda do console na tela -->
+
+                <div class="div_esq">
+
+                    <div class="controle">
+
+                        <div class="seila1">
+                            <button class="bt_cima"></button>
+                        </div>
+
+
+                        <div class="seila2">
+                            <div class="esqDir1">
+                                <button class="bt_esq"></button>
+                            </div>
+
+                            <div class="esqDir2">
+                                <button class="bt_dir"></button>
+                            </div>
+
+
+                        </div>
+
+                        <div class="seila3">
+                            <button class="bt_baixo"></button>
+                        </div>
+
                     </div>
-                    <div class="graph">
-                        <canvas id="canvas_grafico"></canvas>
+
+                    <div class="minBotoes">
+
+                        <div class="div_start">
+                            <button style="display: block; " id="troca1" class="bt_start" onclick="botaoStart()"></button>
+                            <button style="display: none; " id="troca2" class="bt_start" onclick="botaoStart2()"></button>
+
+                        </div>
+
+
+                        <div class="div_select">
+
+                            <button class="bt_select"></button>
+                        </div>
+                        
+
                     </div>
+
                 </div>
+
+                
+
+                <!-- tela do gameBoy -->
+
+                <div class="centro">
+
+                    <div id="tela1" class="divTela" style="display: block;"></div>
+                    
+                </div>
+
+                
+                <!-- lado direito do gameBoy -->
+                
+                <div class="div_dir">
+
+                    <div class="div_btd">
+
+                        <div class="div_led">
+                        <div id="led_bt" class="led" style="display: block;"></div>
+                            
+                        
+                    </div>
+
+                    
+                        <div class="div_AeB">
+                            
+                            <div class="div_A">
+                                <button class="bt_A"></button>
+                                
+                            </div>
+
+                            <div class="div_B">
+                                <button class="bt_B"></button>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
             </div>
-        
-        
-        </body>
+
+        </div>
+    </div>
+
+
 
 
 </body>
+
+
+</body>
+
+<script>
+
+function botaoStart(){
+
+    led_bt.style.display='none';
+    tela1.style.display='none';
+    troca1.style.display='none';
+    troca2.style.display='block';
+}
+function botaoStart2(){
+    
+    troca2.style.display='none';
+    troca1.style.display='block';
+    led_bt.style.display='block';
+    tela1.style.display='block';
+
+}
+
+</script>
