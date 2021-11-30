@@ -5,6 +5,10 @@ function limparFormulario() {
 
 function cadastrar() {
     aguardar();
+    var efeitoSom = new Audio('PokemonSoundEffects.mp3');
+    
+    
+    
 
     var formulario = new URLSearchParams(new FormData(document.getElementById("form_cadastro")));
 
@@ -61,6 +65,8 @@ function cadastrar() {
             window.location = "login.html";
             limparFormulario();
             finalizarAguardar();
+            efeitoSom.play();
+
         } else {
             throw ("Houve um erro ao tentar realizar o cadastro!");
         }

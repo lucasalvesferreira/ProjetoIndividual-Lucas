@@ -2,6 +2,8 @@ var usuarioModel = require("../models/usuarioModel");
 
 var sessoes = [];
 
+var vetor= [];
+
 function testar (req, res) {
     console.log("ENTRAMOS NA usuarioController");
     res.json("ESTAMOS FUNCIONANDO!");

@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Poke_lucas | Dashbord </title>
-
+    <script src="../assets/js/funcoes.js"></script>
+    <script src="../assets/js/funcoes.js"></script>
     <link rel="icon" href="../assets/icons/Pokebola(3).png">
     <link rel="stylesheet" href="./dash.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -17,7 +18,7 @@
 </head>
 
 <body>
-    <!-- onload="validarSessao(),  obterDadosGrafico(1)"> -->
+    <!-- onload="validarSessao()">   -->
 
     <div class="header">
         <div class="container">
@@ -44,12 +45,12 @@
             <div class="menupreto">
 
                 <div class="hello">
-                    <h3>Olá, <span id="b_usuario"></span>!</h3>
+                    <h3>Olá,treninador <span id="b_usuario"></span>!</h3>
                 </div>
 
                 <div class="btn-nav-white">
-                    <a href="">
-                        <h3>Pokedex</h3>
+                    <a href="treinadores.html">
+                        <h3>Treinadores</h3>
                     </a>
                 </div>
 
@@ -59,19 +60,22 @@
                     </a>
                 </div>
 
+                <div class="btn-nav-white">
+                    <a href="dashboard.html">
+                        <h3>Gameboy</h3>
+                    </a>
+                </div>
             </div>
 
-            <!-- <div class="btn-nav-white">
-                        <a href="">
-                            <h3>Treinadores</h3>
-                        </a>
-                    </div>  
-                -->
+
 
         </div>
 
 
         <div class="div_corpo">
+
+
+            <audio controls autoplay style="width: 250px;" src="" id="somm" onclick="midia()" loop></audio>
 
             <div class="gameBoy">
 
@@ -109,51 +113,68 @@
                     <div class="minBotoes">
 
                         <div class="div_start">
-                            <button style="display: block; " id="troca1" class="bt_start" onclick="botaoStart()"></button>
-                            <button style="display: none; " id="troca2" class="bt_start" onclick="botaoStart2()"></button>
+                            <button style="display: block; " id="troca1" class="bt_start"
+                                onclick="botaoStartLigar()"></button>
+                            <button style="display: none; " id="troca2" class="bt_start"
+                                onclick="botaoStart2Desligar()"></button>
 
                         </div>
 
 
                         <div class="div_select">
 
-                            <button class="bt_select"></button>
+                            <button class="bt_select" onclick="bt_select()"></button>
                         </div>
-                        
+
 
                     </div>
 
                 </div>
 
-                
+
 
                 <!-- tela do gameBoy -->
 
                 <div class="centro">
 
                     <div id="tela1" class="divTela" style="display: block;"></div>
-                    
+
+                    <!-- segunda tela -->
+                    <div id="tela2" class="divTela2" style="display:none;">
+                        <div id="tela2_1" class="divTela2_1">
+
+                            <div class="minijoguinhos">
+
+                                <div class="minijoguinho1"></div>
+                                <div class="minijoguinho2"></div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
                 </div>
 
-                
+
                 <!-- lado direito do gameBoy -->
-                
+
                 <div class="div_dir">
 
                     <div class="div_btd">
 
                         <div class="div_led">
-                        <div id="led_bt" class="led" style="display: block;"></div>
-                            
-                        
-                    </div>
+                            <div id="led_bt" class="led" style="display: block;"></div>
 
-                    
+
+                        </div>
+
+
                         <div class="div_AeB">
-                            
+
                             <div class="div_A">
                                 <button class="bt_A"></button>
-                                
+
                             </div>
 
                             <div class="div_B">
@@ -183,20 +204,103 @@
 
 <script>
 
-function botaoStart(){
+    function botaoStartLigar() {
 
-    led_bt.style.display='none';
-    tela1.style.display='none';
-    troca1.style.display='none';
-    troca2.style.display='block';
-}
-function botaoStart2(){
-    
-    troca2.style.display='none';
-    troca1.style.display='block';
-    led_bt.style.display='block';
-    tela1.style.display='block';
+        led_bt.style.display = 'none';
+        tela1.style.display = 'none';
 
-}
+        setTimeout(function () {
+            tela2.style.display = ' block';
+
+        }, 1000);
+
+        troca1.style.display = 'none';
+        troca2.style.display = 'block';
+
+    }
+    function botaoStart2Desligar() {
+
+
+        troca2.style.display = 'none';
+        troca1.style.display = 'block';
+        led_bt.style.display = 'block';
+        tela1.style.display = 'block';
+        tela2.style.display = ' none';
+
+    }
+
+
+    function trocaDfotoPerfil() {
+
+        Math.random()
+
+
+    }
+
+    var vetor = [];
+    function midia() {
+
+        var song1 = new Audio('musicaVeridiam.mp3');
+        var song2 = new Audio('Pokémon - Abertura - 1ª temporada.mp3');
+        var song3 = new Audio('Pokémon Abertura - 2ª Temporada.mp3');
+        var song4 = new Audio('Pokemon BlueRed  Route 1.mp3');
+        var song5 = new Audio('Pokemon RubySapphireEmerald- Littleroot Town.mp3');
+        var song6 = new Audio('Route 11  Pokémon FireRedLeafGreen.mp3');
+
+
+
+        for (var i = 1; i <=6 ; i++) {
+            var aleatorio = ((Math.random() * 5) + 1).toFixed
+
+            if (aleatorio == 1) {
+                vetor.push(song1);
+                document.getElementById("somm").src = song1;
+                break;
+            }
+            else if (aleatorio == 2) {
+                vetor.push(song2);
+                document.getElementById("somm").src = song2;
+                break;
+            }
+            else if (aleatorio == 3) {
+                document.getElementById("somm").src = song3;
+                vetor.push(song3);
+                break;
+            }
+            else if (aleatorio == 4) {
+                document.getElementById("somm").src = song4;
+                vetor.push(song4);
+                break;
+            }
+            else if (aleatorio == 5) {
+                document.getElementById("somm").src = song5;
+                vetor.push(song5);
+                break;
+            }
+            else if (aleatorio == 6) {
+                document.getElementById("somm").src = song6;
+                vetor.push(song6);
+                break;
+            }
+
+
+console.log(vetor)
+        }
+
+    }
+
+    var audioStart = new Audio('./');
+
+
+    audioStart.play();
+
+// setTimeout(() => {
+
+//     divGame.style.display = 'block';
+// }, 1000)
+
+
+
+
 
 </script>

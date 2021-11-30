@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Poke_lucas | Dashbord </title>
+    <script src="../assets/js/funcoes.js"></script>
+    <script src="../assets/js/funcoes.js"></script>
+    <link rel="icon" href="../assets/icons/Pokebola(3).png">
+    <link rel="stylesheet" href="./dash.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
+
+</head>
+
+<body>
+    <!-- onload="validarSessao()">   -->
+
+    <div class="header">
+        <div class="container">
+
+            <button class="btn-logout" onclick="limparSessao()"> Sair</button>
+
+
+        </div>
+    </div>
+
+
+
+    <div class="janela">
+
+        <div class="header-left">
+            <h1>PokeLucas <img class="miniPoke_Titulo" src='../assets/icons/Pokebola(3).png'></h1>
+
+            <div class="Perfil">
+                <div class="avatar_index_foto"> </div>
+
+            </div>
+
+
+            <div class="menupreto">
+
+                <div class="hello">
+                    <h3>Olá,treninador <span id="b_usuario"></span>!</h3>
+                </div>
+
+                <div class="btn-nav-white">
+                    <a href="treinadores.html">
+                        <h3>Treinadores</h3>
+                    </a>
+                </div>
+
+                <div class="btn-nav">
+                    <a href="">
+                        <h3>Meus Pokemons</h3>
+                    </a>
+                </div>
+
+                <div class="btn-nav-white">
+                    <a href="dashboard.html">
+                        <h3>Gameboy</h3>
+                    </a>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+        <div class="div_corpo2">
+
+
+            <div class='toper'>
+                <button onclick="atualizarFeed()" class="toperr"> VerificarTreinadores</button>
+
+            </div>  
+            
+            <div id="todos">
+                <div id="todosTreinadores">
+                </div>
+                
+                
+                <div class="inicialFav">
+                </div>
+            </div>
+
+
+
+
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+</body>
+
+
+</body>
+
+<script>
+    function atualizarFeed() {
+        // aguardar();
+        fetch("/avisos/listar").then(function (resposta) {
+            if (resposta.ok) {
+                if (resposta.status == 204) {
+
+                    var feed = document.getElementById("todosTreinadores");
+                    var mensagem = document.createElement("span");
+
+                    mensagem.innerHTML = "Nenhum resultado encontrado."
+                    feed.appendChild(mensagem);
+                    throw "Nenhum resultado encontrado!!";
+                }
+
+                resposta.json().then(function (resposta) {
+                    console.log("Dados recebidos: ", JSON.stringify(resposta));
+
+                    var feed = document.getElementById("todosTreinadores");
+                    feed.innerHTML = "";
+
+
+
+                    for (var i = 0; i < resposta.length; i++) {
+                        var publicacao = resposta[i];
+
+                        
+                        // criando e manipulando elementos do HTML via JavaScript
+                        var divPublicacao = document.createElement("div");
+                        var spanID = document.createElement("span");
+                        var spanInicial = document.createElement("span");
+                        var spanNome = document.createElement("span");
+                        var divDescricao = document.createElement("div");
+                        var divButtons = document.createElement("div");
+
+                        spanID.innerHTML = "pokeID: <b>" + publicacao.pokeId + "</b>";
+                        spanInicial.innerHTML = "Inicial: <b>" + publicacao.inicial + "</b>";
+                        spanNome.innerHTML = "Treinador: <b>" + publicacao.nome + "</b>";
+                        // divDescricao.innerHTML = "<img src="" >";
+
+                        // if(spanInicial.id === 'charmander'){
+                        //     alert('charmander');
+                        // }
+
+
+                            // console.log(spanInicial)
+                        divPublicacao.className = "publicacao";
+                        spanInicial.id = "inputNumero" + publicacao.idAviso;
+                        spanNome.className = "publicacao-nome";
+                        spanInicial.className = "publicacao-titulo";
+                        divDescricao.className = "publicacao-descricao";
+
+                        divButtons.className = "div-buttons"
+
+                        divPublicacao.appendChild(spanID);
+                        divPublicacao.appendChild(spanNome);
+                        divPublicacao.appendChild(spanInicial);
+                        // divPublicacao.appendChild(divDescricao);
+                        divPublicacao.appendChild(divButtons);
+                        feed.appendChild(divPublicacao);
+                    }
+
+                    // finalizarAguardar();
+                });
+            } else {
+                throw ('Houve um erro na API!');
+            }
+        }).catch(function (resposta) {
+            console.error(resposta);
+            finalizarAguardar();
+        });
+    }
+
+
+    // function testar() {
+    //     aguardar();
+
+    //     var formulario = new URLSearchParams(new FormData(document.getElementById("todosTreinadores")));
+
+    //     var divResultado = document.getElementById("div_feed");
+
+    //     divResultado.appendChild(document.createTextNode(formulario.get("descricao"))); 
+    //     divResultado.innerHTML = formulario.get("descricao");
+
+    //     finalizarAguardar();
+
+    //     return false;
+    // }
+
+</script>
