@@ -18,10 +18,10 @@ function entrar(email, senha) {
     return database.executar(instrucao);
 }
 
-function cadastrar(nome, email, senha, pokemonFavorito) {
+function cadastrar(nome, email, senha, pokemonFavorito,cpf) {
     console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():", nome, email, senha);
     var instrucao = `
-        INSERT INTO usuario (nome, email, senha, inicial) VALUES ('${nome}', '${email}', '${senha}', '${pokemonFavorito}');
+        INSERT INTO usuario (nome, email, senha, inicial,cpf) VALUES ('${nome}', '${email}', '${senha}', '${pokemonFavorito},${cpf}');
 `;
     console.log("Executando a instrução SQL: \n"+instrucao);
     return database.executar(instrucao);
